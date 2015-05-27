@@ -1,0 +1,5 @@
+.ce_mae_img_map .image_container {position: relative;overflow: hidden}
+.ce_mae_img_map .area {display: block;position: absolute;background-position: center center;background-repeat: no-repeat;background-size: contain}
+    .ce_mae_img_map .area.stretch-bg {background-size: 100% 100%}
+    .ce_mae_img_map .area.left-bg {background-position: left center}
+    .ce_mae_img_map .area.right-bg {background-position: right center}
