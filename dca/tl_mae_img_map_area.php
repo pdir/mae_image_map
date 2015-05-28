@@ -245,7 +245,7 @@ $GLOBALS['TL_DCA']['tl_mae_img_map_area'] = array
         'linktext' => array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_mae_img_map_area']['linktext'],
-            'exclude'                 => false,
+            'exclude'                 => true,
             'search'                  => true,
             'inputType'               => 'text',
             'eval'                    => array('mandatory'=>false, 'maxlength'=>200),
