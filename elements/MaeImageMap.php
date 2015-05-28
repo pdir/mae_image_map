@@ -65,12 +65,16 @@ class MaeImageMap extends \Contao\ContentImage
     {
         $hasDescription     = !empty($objArea->description);
         $hasCustomClasses   = !empty($objArea->cssClass);
+        $hasLinkText        = !empty($objArea->linktext);
         $areaDescId         = "areaDesc-" . $objArea->id;
         $linkClasses        = array("area", $objArea->imageStyle);
         $descriptionClasses = array('description', 'invisible');
 
         if($hasDescription) {
             $linkClasses[] = "hasDescription";
+        }
+        if($hasLinkText) {
+            $linkClasses[] = "hasLinktext";
         }
         if($hasCustomClasses) {
             $customClasses = trimsplit(" ", $objArea->cssClass);
@@ -89,7 +93,7 @@ class MaeImageMap extends \Contao\ContentImage
             $result .= " target=\"_blank\"";
         }
         $result .= " style=\"" . $this->getAreaStyle($objArea) . "\"";
-        $result .= "></a>\n";
+        $result .= ">" . ($hasLinkText ? "<span>" . $objArea->linktext . "</span>" : "") . "</a>\n";
         if($hasDescription) {
 
 

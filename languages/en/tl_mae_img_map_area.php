@@ -27,6 +27,7 @@ $GLOBALS['TL_LANG']['tl_mae_img_map_area']['image'] = array('Background-image', 
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['imageStyle'] = array('Background style', 'Define, how the background should be displayed.');
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['url'] = array('Link', 'choose the link for this area.');
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['target_blank'] = array('New Tab', 'Should the link be opened in a new tab');
+$GLOBALS['TL_LANG']['tl_mae_img_map_area']['linktext'] = array('Linktext', 'Text to be displayed inside the anchor <a>...</a>');
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['published'] = array('visible', 'Should the area be visible on the map');
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['cssClass'] = array('CSS class(es)', 'space separated list of css classes');
 

@@ -16,9 +16,9 @@ The pixel coordinates you enter are being tranlated into percentages for the abs
 You may add your own :hover, :active styles for those areas.
 
 First you create a new ImageMap in the backend and specify the base width and height of your underlying image as well as the
-default dimensionsand backgrounds for the areas.
+default dimensions and backgrounds for the areas.
 
-Then you add the areas with their title, position, image, link and description.
+Then you add the areas with their title, position, image, link, linktext and description.
 
 To add an image map to an article, you have to select the new media content element "ImageMap" and select the appropriate map
 in its properties.

@@ -42,7 +42,8 @@ $GLOBALS['TL_DCA']['tl_mae_img_map_area'] = array
 			'mode'                    => 1,
 			'fields'                  => array('title'),
 			'flag'                    => 11,
-            'disableGrouping'         => true
+            'disableGrouping'         => true,
+            'panelLayout'             => 'search'
 		),
 		'label' => array
 		(
@@ -106,7 +107,7 @@ $GLOBALS['TL_DCA']['tl_mae_img_map_area'] = array
 	'palettes' => array
 	(
 		'__selector__'                => array('customSize'),
-		'default'                     => '{title_legend},title;{pos_legend},coordRef,coordX,coordY;{size_legend},customSize;{data_legend},url,target_blank,description;{bg_legend},image,imageStyle;{expert_legend},published,cssClass'
+		'default'                     => '{title_legend},title;{pos_legend},coordRef,coordX,coordY;{size_legend},customSize;{data_legend},url,target_blank,linktext,description;{bg_legend},image,imageStyle;{expert_legend},published,cssClass'
 	),
 
 	// Subpalettes
@@ -136,6 +137,7 @@ $GLOBALS['TL_DCA']['tl_mae_img_map_area'] = array
 		(
 			'label'                   => &$GLOBALS['TL_LANG']['tl_mae_img_map_area']['title'],
 			'exclude'                 => false,
+            'search'                  => true,
 			'inputType'               => 'text',
 			'eval'                    => array('mandatory'=>true, 'maxlength'=>120),
 			'sql'                     => "varchar(120) NOT NULL default ''"
@@ -144,6 +146,7 @@ $GLOBALS['TL_DCA']['tl_mae_img_map_area'] = array
         (
             'label'                   => &$GLOBALS['TL_LANG']['tl_mae_img_map_area']['description'],
             'exclude'                 => false,
+            'search'                  => true,
             'inputType'               => 'textarea',
             'eval'                    => array('mandatory'=>false, 'rte'=>'tinyMCE', 'tl_class'=>'clr'),
             'sql'                     => "mediumtext NULL"
@@ -238,6 +241,15 @@ $GLOBALS['TL_DCA']['tl_mae_img_map_area'] = array
             'inputType'               => 'checkbox',
             'eval'                    => array('doNotCopy'=>false, 'tl_class'=>'m12 w50'),
             'sql'                     => "char(1) NOT NULL default ''"
+        ),
+        'linktext' => array
+        (
+            'label'                   => &$GLOBALS['TL_LANG']['tl_mae_img_map_area']['linktext'],
+            'exclude'                 => false,
+            'search'                  => true,
+            'inputType'               => 'text',
+            'eval'                    => array('mandatory'=>false, 'maxlength'=>200),
+            'sql'                     => "varchar(200) NOT NULL default ''"
         ),
         'published' => array
         (

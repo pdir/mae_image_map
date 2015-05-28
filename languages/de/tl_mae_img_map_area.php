@@ -25,9 +25,9 @@ $GLOBALS['TL_LANG']['tl_mae_img_map_area']['height'] = array('Höhe', 'Höhe des
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['description'] = array('Beschreibung', 'Nähere Beschreibung des Bereichs.');
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['image'] = array('Hintergrundbild', 'Wählen Sie ein png/gif aus, falls nicht der Standard dieser ImageMap verwendet werden soll.');
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['imageStyle'] = array('Hintergrunddarstellung', 'Legen Sie fest, wie der Hintergrund des Bereichs dargestellt werden soll.');
-
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['url'] = array('Link', 'Wählen Sie die Verknüpfung, auf die dieser Bereich verweisen soll.');
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['target_blank'] = array('Neuer Tab', 'Soll der Link in einem neuen Tab geöffnet werden');
+$GLOBALS['TL_LANG']['tl_mae_img_map_area']['linktext'] = array('Linktext', 'Text, der im Bereich stehen soll <a>...</a>');
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['published'] = array('sichtbar', 'Soll der Bereich auf der Karte sichtbar sein');
 $GLOBALS['TL_LANG']['tl_mae_img_map_area']['cssClass'] = array('CSS Klasse(n)', 'Leerzeichengetrennte Liste von CSS Klassen');
 
