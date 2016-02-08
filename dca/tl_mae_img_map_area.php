@@ -227,7 +227,7 @@ $GLOBALS['TL_DCA']['tl_mae_img_map_area'] = array
             'label'                   => &$GLOBALS['TL_LANG']['tl_mae_img_map_area']['url'],
             'exclude'                 => false,
             'inputType'               => 'text',
-            'eval'                    => array('rgxp'=>'url', 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class'=>'w50 wizard', 'mandatory'=>true),
+            'eval'                    => array('rgxp'=>'url', 'decodeEntities'=>true, 'maxlength'=>255, 'tl_class'=>'w50 wizard', 'mandatory'=>false),
             'wizard' => array
             (
                 array('tl_mae_img_map_area', 'pagePicker')

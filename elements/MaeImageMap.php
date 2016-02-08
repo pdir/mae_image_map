@@ -84,8 +84,8 @@ class MaeImageMap extends \Contao\ContentImage
             }
         }
 
-
-        $result = "<a class=\"" . implode(" ", $linkClasses) . "\" href=\"" . $objArea->url . "\" title=\"" . $objArea->title . "\"";
+        $href = !empty($objArea->url) ? $objArea->url : "javascript:void(0)";
+        $result = "<a class=\"" . implode(" ", $linkClasses) . "\" href=\"" . $href . "\" title=\"" . $objArea->title . "\"";
         if($hasDescription) {
             $result .= " data-description-id=\"" . $areaDescId . "\"";
         }
