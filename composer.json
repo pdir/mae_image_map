@@ -53,5 +53,12 @@
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "contao/manager-plugin": true
     }
+  },
+  "extra": {
+    "bamarni-bin": {
+      "bin-links": false,
+      "target-directory": "tools"
+    },
+    "contao-manager-plugin": "Pdir\\MaeImageMapBundle\\ContaoManager\\Plugin"
   }
 }
