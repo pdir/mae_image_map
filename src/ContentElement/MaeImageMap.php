@@ -1,13 +1,17 @@
 <?php
 
-namespace Mae;
+namespace Pdir\MaeImageMapBundle\ContentElement;
+
+use Contao\ContentImage;
+use Contao\Database;
+use Contao\FilesModel;
 use Database\Result;
 
 /**
  * Class MaeImageMap
  * @author Martin Eberhardt <kontakt@martin-eberhardt.com>
  */
-class MaeImageMap extends \Contao\ContentImage
+class MaeImageMap extends ContentImage
 {
     const refPointCenter    = "center";
     const refPointLeftTop   = "leftTop";
@@ -38,16 +42,16 @@ class MaeImageMap extends \Contao\ContentImage
         $mapPoints = "";
 
         // only load css and js, if this cte is in use on current page
-        $GLOBALS['TL_CSS']['mae_img_map'] = 'system/modules/mae_image_map/assets/css/mae_image_map.css|static';
+        $GLOBALS['TL_CSS']['mae_img_map'] = 'bundles/pdirmaeimagemap/css/mae_image_map.css|static';
         //$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/mae_image_map/assets/js/mae_image_map.js|static'; // TODO check this in to use .js file
         $this->addImageToTemplate($this->Template, $this->arrData);
 
         $map_id     = $this->tl_mae_img_map_id;
         if($map_id > 0) {
-            $objMap = \Database::getInstance()->prepare("SELECT * FROM tl_mae_img_map WHERE id = ?")->limit(1)->execute($map_id);
+            $objMap = Database::getInstance()->prepare("SELECT * FROM tl_mae_img_map WHERE id = ?")->limit(1)->execute($map_id);
             if($objMap->count() == 1) {
                 $this->objMap = $objMap;
-                $objArea    = \Database::getInstance()->prepare("SELECT * FROM tl_mae_img_map_area WHERE pid = ? AND published = '1'")->execute($map_id);
+                $objArea    = Database::getInstance()->prepare("SELECT * FROM tl_mae_img_map_area WHERE pid = ? AND published = '1'")->execute($map_id);
                 while($objArea->next()) {
                     $mapPoints .= $this->getMapPointHtml($objArea);
                 }
@@ -154,11 +158,11 @@ class MaeImageMap extends \Contao\ContentImage
             $uuid = $objArea->image;
         }
         if(empty($uuid)) {
-            $result = "system/modules/mae_image_map/assets/transparent.gif";
+            $result = "bundles/pdirmaeimagemap/transparent.gif";
         }
         else {
 
-            $objFile = \FilesModel::findByUuid($uuid);
+            $objFile = FilesModel::findByUuid($uuid);
             if ($objFile !== null && is_file(TL_ROOT . '/' . $objFile->path)) {
                 $result = $objFile->path;
             }
@@ -167,4 +171,3 @@ class MaeImageMap extends \Contao\ContentImage
         return $result;
     }
 }
-?>

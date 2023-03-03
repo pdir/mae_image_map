@@ -35,3 +35,9 @@ new media content element "ImageMap"
 visit:
 http://www.martin-eberhardt.com
 for more information
+
+
+## Run tests
+
+    vendor/bin/phpunit --configuration phpunit.xml --coverage-text --log-junit report.xml
+    vendor/bin/ecs check src tests
