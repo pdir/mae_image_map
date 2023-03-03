@@ -3,15 +3,17 @@
 declare(strict_types=1);
 
 /*
- * Web-Tools Bundle for Contao Open Source CMS
+ * Mae Image Map Bundle for Contao Open Source CMS
  *
- * Copyright (c) 2022 pdir / digital agentur // pdir GmbH
+ * @package    MaeImgMap
+ * @author     Martin Eberhardt
+ * @license    LGPL-3.0+
+ * @copyright  Martin Eberhardt 2015
+ * @link       https://github.com/marebe1602/mae_image_map
  *
- * @package    webtools-bundle
- * @link       https://pdir.de/contao-webtools/
- * @license    LGPL-3.0-or-later
+ * forked by pdir
  * @author     Mathias Arzberger <develop@pdir.de>
- * @author     Christian Mette <develop@pdir.de>
+ * @link       https://github.com/pdir/mae_image_map
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
