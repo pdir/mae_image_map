@@ -30,7 +30,7 @@ $GLOBALS['TL_DCA']['tl_mae_img_map'] = array
     (
         'dataContainer'               => DC_Table::class,
         'enableVersioning'            => true,
-        'ctable'                      => array('dca\tl_mae_img_map_area'),
+        'ctable'                      => ['tl_mae_img_map_area'],
         'sql' => array
         (
             'keys' => array
@@ -183,7 +183,7 @@ $GLOBALS['TL_DCA']['tl_mae_img_map'] = array
             'label'                   => &$GLOBALS['TL_LANG']['tl_mae_img_map']['stdImage'],
             'exclude'                 => false,
             'inputType'               => 'fileTree',
-            'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'extensions'=>'png,gif', 'mandatory'=>false, 'tl_class'=>'clr'),
+            'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'extensions'=>'%contao.image.valid_extensions%', 'mandatory'=>false, 'tl_class'=>'clr'),
             'sql'                     => "binary(16) NULL"
         )
     )

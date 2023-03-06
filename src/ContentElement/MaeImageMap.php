@@ -22,9 +22,10 @@ declare(strict_types=1);
 namespace Pdir\MaeImageMapBundle\ContentElement;
 
 use Contao\ContentImage;
+use Contao\Controller;
 use Contao\Database;
 use Contao\FilesModel;
-use Database\Result;
+use Contao\System;
 
 /**
  * Class MaeImageMap.
@@ -65,7 +66,21 @@ class MaeImageMap extends ContentImage
         // only load css and js, if this cte is in use on current page
         $GLOBALS['TL_CSS']['mae_img_map'] = 'bundles/pdirmaeimagemap/css/mae_image_map.css|static';
         //$GLOBALS['TL_JAVASCRIPT'][] = 'system/modules/mae_image_map/assets/js/mae_image_map.js|static'; // TODO check this in to use .js file
-        $this->addImageToTemplate($this->Template, $this->arrData);
+
+        // add image
+        $figure = System::getContainer()
+            ->get('contao.image.studio')
+            ->createFigureBuilder()
+            ->from($this->objFilesModel)
+            ->setSize($this->size)
+            ->setMetadata($this->objModel->getOverwriteMetadata())
+            ->enableLightbox((bool) $this->fullsize)
+            ->buildIfResourceExists();
+
+        if (null !== $figure)
+        {
+            $figure->applyLegacyTemplateData($this->Template, $this->imagemargin);
+        }
 
         $map_id = $this->tl_mae_img_map_id;
 

@@ -2,12 +2,27 @@
 
 <?php $this->block('content'); ?>
 
-<figure class="image_container"<?php if ($this->margin): ?> style="<?php echo $this->margin; ?>"<?php endif; ?>>
-    <?php $this->insert('picture_default', $this->picture); ?>
-        <figcaption class="caption">
-            <?php echo $this->mapPoints; ?>
-        </figcaption>
+  <figure class="image_container<?= $this->floatClass ?>"<?php if ($this->margin): ?> style="<?= $this->margin ?>"<?php endif; ?>>
+    <?php if ($this->imageHref || $this->href): ?>
+      <a href="<?= $this->imageHref ?: $this->href ?>"<?php if ($this->linkTitle): ?> title="<?= $this->linkTitle ?>"<?php endif; ?><?= $this->attributes ?>>
+    <?php endif; ?>
 
+    <?php $this->insert('picture_default', $this->picture); ?>
+
+    <?php if ($this->imageHref || $this->href): ?>
+      </a>
+    <?php endif; ?>
+
+    <figcaption class="caption">
+      <?= $this->caption ?>
+      <?php echo $this->mapPoints; ?>
+    </figcaption>
   </figure>
+
+<?php
+  if ($this->figure) {
+    $this->addSchemaOrg($this->figure->getSchemaOrgData());
+  }
+?>
 
 <?php $this->endblock(); ?>

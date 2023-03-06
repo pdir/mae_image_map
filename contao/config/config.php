@@ -18,6 +18,7 @@
  */
 
 use Contao\ArrayUtil;
+use Pdir\MaeImageMapBundle\Model\MaeImageMapModel;
 
 /**
  * Back end modules
@@ -35,3 +36,8 @@ ArrayUtil::arrayInsert($GLOBALS['BE_MOD']['content'], 1, $imgMapModAr);
  * Content Elements
  */
 $GLOBALS['TL_CTE']['media']['mae_img_map'] = '\Pdir\MaeImageMapBundle\ContentElement\MaeImageMap';
+
+/**
+ * Models
+ */
+$GLOBALS['TL_MODELS']['tl_mae_img_map'] = MaeImageMapModel::class;
