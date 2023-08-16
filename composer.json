@@ -1,5 +1,5 @@
 {
-  "name": "marebe1602/mae_image_map",
+  "name": "pdir/mae_image_map",
   "type": "contao-module",
   "description": "configure responsive image maps without java script even on IE8",
   "license": "LGPL-3.0+",
