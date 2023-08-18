@@ -22,7 +22,6 @@ declare(strict_types=1);
 namespace Pdir\MaeImageMapBundle\ContentElement;
 
 use Contao\ContentImage;
-use Contao\Controller;
 use Contao\Database;
 use Contao\FilesModel;
 use Contao\System;
@@ -75,10 +74,10 @@ class MaeImageMap extends ContentImage
             ->setSize($this->size)
             ->setMetadata($this->objModel->getOverwriteMetadata())
             ->enableLightbox((bool) $this->fullsize)
-            ->buildIfResourceExists();
+            ->buildIfResourceExists()
+        ;
 
-        if (null !== $figure)
-        {
+        if (null !== $figure) {
             $figure->applyLegacyTemplateData($this->Template, $this->imagemargin);
         }
 

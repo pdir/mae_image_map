@@ -1,0 +1,7 @@
+<div class="widget be-mae-area-edit clr">
+
+  <h3>Bereiche bearbeiten - <?= $this->name ?></h3>
+
+  <?= $this->figure($this->originalImageSRC, '8'); ?>
+
+</div>

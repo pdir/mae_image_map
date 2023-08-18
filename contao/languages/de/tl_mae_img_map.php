@@ -22,13 +22,12 @@ $GLOBALS['TL_LANG']['tl_mae_img_map']['stdAreaWidth'] = array('Standardbreite de
 $GLOBALS['TL_LANG']['tl_mae_img_map']['stdAreaHeight'] = array('Standardhöhe der Bereiche', 'Standardhöhe der Bereiche in der Vorlage (in Pixel)');
 $GLOBALS['TL_LANG']['tl_mae_img_map']['stdImage'] = array('Standard-Hintergrund', 'png oder gif Grafik, die standardmäßig verwendet werden soll (sollte ca. doppelt so groß sein wie die Quadrate - retina)');
 
-
 /**
  * Legends
  */
 $GLOBALS['TL_LANG']['tl_mae_img_map']['title_legend'] = 'Titel';
 $GLOBALS['TL_LANG']['tl_mae_img_map']['data_legend'] = 'Grunddaten';
-
+$GLOBALS['TL_LANG']['tl_mae_img_map']['area_legend'] = 'Bereiche';
 
 /**
  * Buttons

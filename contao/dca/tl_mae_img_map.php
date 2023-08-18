@@ -117,7 +117,7 @@ $GLOBALS['TL_DCA']['tl_mae_img_map'] = array
     'palettes' => array
     (
         '__selector__'                => array(''),
-        'default'                     => '{title_legend},title;{data_legend},baseWidth,baseHeight,stdAreaWidth,stdAreaHeight,stdImage;'
+        'default'                     => '{title_legend},title;{data_legend},baseWidth,baseHeight,stdAreaWidth,stdAreaHeight,stdImage;{area_legend},area_edit;'
     ),
 
     // Subpalettes
@@ -185,6 +185,9 @@ $GLOBALS['TL_DCA']['tl_mae_img_map'] = array
             'inputType'               => 'fileTree',
             'eval'                    => array('filesOnly'=>true, 'fieldType'=>'radio', 'extensions'=>'%contao.image.valid_extensions%', 'mandatory'=>false, 'tl_class'=>'clr'),
             'sql'                     => "binary(16) NULL"
-        )
+        ),
+        'area_edit' => [
+            'exclude' => true,
+        ]
     )
 );

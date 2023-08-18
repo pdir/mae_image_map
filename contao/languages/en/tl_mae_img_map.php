@@ -22,13 +22,12 @@ $GLOBALS['TL_LANG']['tl_mae_img_map']['stdAreaWidth'] = array('Default-width of 
 $GLOBALS['TL_LANG']['tl_mae_img_map']['stdAreaHeight'] = array('Default-height of the areas', 'Default-height of the areas within the template (pixels)');
 $GLOBALS['TL_LANG']['tl_mae_img_map']['stdImage'] = array('Standard-Background', 'png or gif of the standard background-image (use about the double size of your square)');
 
-
 /**
  * Legends
  */
 $GLOBALS['TL_LANG']['tl_mae_img_map']['title_legend'] = 'Title';
 $GLOBALS['TL_LANG']['tl_mae_img_map']['data_legend'] = 'Base data';
-
+$GLOBALS['TL_LANG']['tl_mae_img_map']['area_legend'] = 'Areas';
 
 /**
  * Buttons
